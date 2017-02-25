@@ -1,3 +1,46 @@
+# frontend-nanodegree-mobile-portfolio
+Udacity Front-end Nanodegree Program
+
+[View Project](https://screamingjungle.github.io/frontend-nanodegree-mobile-portfolio/)
+
+##To Build Project Locally
+
+`clone` the repo, and navigate to its top level directory
+
+With grunt, nodeJs & Npm installed, run in the project directory:
+
+`npm install`
+
+and then run
+
+`grunt`
+
+will output a build in /docs (this is used for the github pages mount)
+
+##Modifications to "Cameron Pittman: Portfolio"
+
+Taken as much of Google Page Speed Insights recommendations - there were webserver configurations beyond my control.
+
+Implemented grunt automation for:
+- Image minification
+- CSS + JS minification & inlined
+- HTML minification
+- critical CSS + ngrok + page speed test + CSS lint - not active
+
+##Modifications to "Cam's Pizzeria"
+
+- pizzaElementGenerator: faster dom creation by using string for innerHTML injection / use bootstrap columns / move some styling to css
+- changePizzaSizes: move dx out of loop / rework the style update
+- moved to top-level functions:
+    * changleSliderLabel
+    * determineDx
+    * changePizzaSizes
+    * sizedSwitcher
+- updatePositions: uses requestAnimationFrame with debounce / improved class selector / split workload on looped style updates
+- DOMContentLoaded: improved calculation of columns and rows / fragment used for single DOM update
+- requestAnimationFrame polyfill implemented
+- Replaced querySelectorAll / querySelector with getElementsByClassName / getElementById
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
@@ -15,15 +58,15 @@ Some useful tips to help you get started:
 
   ```bash
   $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
+  $> python -m SimpleHTTPServer 8181
   ```
 
-1. Open a browser and visit localhost:8080
+1. Open a browser and visit localhost:8181
 1. Download and install [ngrok](https://ngrok.com/) to the top-level of your project directory to make your local server accessible remotely.
 
   ``` bash
   $> cd /path/to/your-project-folder
-  $> ./ngrok http 8080
+  $> ./ngrok http 8181
   ```
 
 1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
