@@ -27,6 +27,12 @@ Implemented grunt automation for:
 - HTML minification
 - critical CSS + ngrok + page speed test + CSS lint - not active
 
+Other changes:
+- async JS
+- CSS lint
+- deferred non-critical CSS + GoogleFont
+- print.css to media query
+
 ##Modifications to "Cam's Pizzeria"
 
 - pizzaElementGenerator: faster dom creation by using string for innerHTML injection / use bootstrap columns / move some styling to css
@@ -36,7 +42,7 @@ Implemented grunt automation for:
     * determineDx
     * changePizzaSizes
     * sizedSwitcher
-- updatePositions: uses requestAnimationFrame with debounce / improved class selector / split workload on looped style updates
+- updatePositions: uses requestAnimationFrame with debounce / improved class selector / split workload on looped style updates / translate3d
 - DOMContentLoaded: improved calculation of columns and rows / fragment used for single DOM update
 - requestAnimationFrame polyfill implemented
 - Replaced querySelectorAll / querySelector with getElementsByClassName / getElementById
